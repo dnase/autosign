@@ -7,7 +7,7 @@ class autosign (
     owner   => 'pe-puppet',
     group   => 'pe-puppet',
     mode    => '0700',
-    content => epp('autosign_example/autosign.rb.epp', {shared_secret => $shared_secret}),
+    content => epp('autosign/autosign.rb.epp', {shared_secret => $shared_secret}),
     notify  => Service['pe-puppetserver'],
   }
 
